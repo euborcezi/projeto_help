@@ -40,7 +40,7 @@ header nav a {
 
 header nav a:hover {
     background-color: #ffeb3b;
-    color: #0d47a1;
+    color: #008000;
 }
 
 /* Conteúdo principal */
@@ -49,7 +49,7 @@ main {
 }
 
 main h1 {
-    color: #008000;
+    color: #0d47a1;
 }
 
 /* Rodapé */
