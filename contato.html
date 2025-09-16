@@ -23,18 +23,21 @@
     <!-- Conteúdo principal -->
     <main>
         <h1>Entre em Contato</h1>
-        <form class="contato-form">
+        <form class="contato-form" action="action_contato.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
-            <label for="email">Telefone:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu número de telefone" required>
+            <label for="data">Data de envio:</label>
+            <input type="date" id="data" name="data">
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu número de telefone" required>
 
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
             <label for="mensagem">Problema:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Relate seu problema"></textarea>
+            <textarea id="text" name="mensagem" rows="5" placeholder="Relate seu problema"></textarea>
 
             <button type="submit">Enviar</button>
         </form>

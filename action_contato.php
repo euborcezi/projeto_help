@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuporteIF - Resultado do Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h2>SuporteIF</h2>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="info.html">Informações</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <h1>Dados Recebidos</h1>
+        <div class="contato-form">
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                echo "<p><strong>Nome:</strong> " . htmlspecialchars($_POST["nome"]) . "</p>";
+                echo "<p><strong>Email:</strong> " . htmlspecialchars($_POST["email"]) . "</p>";
+
+                if (!empty($_POST["mensagem"])) {
+                    echo "<p><strong>Mensagem:</strong> " . nl2br(htmlspecialchars($_POST["mensagem"])) . "</p>";
+                }
+
+                // Exibe os outros campos que o aluno adicionar
+                foreach ($_POST as $campo => $valor) {
+                    if (!in_array($campo, ["nome", "email", "mensagem"])) {
+                        echo "<p><strong>" . ucfirst($campo) . ":</strong> " . htmlspecialchars($valor) . "</p>";
+                    }
+                }
+            } else {
+                echo "<p>Nenhum dado foi enviado.</p>";
+            }
+            ?>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 SuporteIF - Sistema de Suporte Técnico do IFPR.</p>
+    </footer>
+
+</body>
+
+</html>
