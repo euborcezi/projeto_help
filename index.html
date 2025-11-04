@@ -22,22 +22,61 @@
     </header>
 
     <!-- Conteúdo principal -->
-    <main>
-        <h1>Bem-vindo ao suporte técnico do IFPR</h1>
-        <p>Sua central de suporte técnico no IFPR — simples, rápida e funcional.</p>
+   <main>
+  <h1>Bem-vindo ao suporte técnico do IFPR</h1>
+  <p>Sua central de suporte técnico no IFPR - simples, rápida e funcional.</p>
 
-        <div class="carros">
-            <img src="https://addee.com.br/wp-content/uploads/2020/01/original-eb7eaa8665c42fe9cd1e7bc7d51336a2.jpeg"
-                alt="RAM 1500 Limited 2020">
+  <div id="conteudo" class="conteudo-scroll">
+    <p>Carregando conteúdo...</p>
+  </div>
+</main>
 
-            <img src="https://www.valuehost.com.br/blog/wp-content/uploads/2018/10/GettyImages-1136343736-1-1.jpg"
-                alt="Nivus 200 tsi 2023">
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwIFyLyJFMJ8LFuC-w191VRT5C763F12Q3CDdXo8ZvVIFpdcD6cn1-EoWPmKJTmxMDC/exec"
+async function carregarConteudo() {
+  const container = document.getElementById('conteudo');
+  container.innerHTML = "<p>Carregando conteúdo...</p>";
 
-            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/25414367-tecnologia-circulo-fundo-com-uma-o-circuito-borda-como-uma-componente-representa-uma-conexao-para-inteligente-tecnologia-este-coleta-dados-processos-isto-e-transmite-isto-como-uma-tecnologia-este-ajuda-negocios-crescer-vetor.jpg"
-                alt="Chevrolet Tracker Premier 2023">
-                
-        </div>
-    </main>
+  try {
+    const res = await fetch(SCRIPT_URL);
+    const dados = await res.json();
+    container.innerHTML = '';
+
+    dados.forEach(item => {
+      const bloco = document.createElement('div');
+      bloco.className = 'bloco-item';
+
+      const titulo = document.createElement('h2');
+      titulo.textContent = item.Título || '';
+      bloco.appendChild(titulo);
+
+      const descricao = document.createElement('p');
+      descricao.textContent = item.Descrição || '';
+      bloco.appendChild(descricao);
+
+      if (item.Url && item.Url.startsWith('http')) {
+        if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i) || item.Url.includes('unsplash')) {
+          const img = document.createElement('img');
+          img.src = item.Url;
+          img.alt = item.Título || 'Imagem';
+          bloco.appendChild(img);
+        } else {
+          const link = document.createElement('a');
+          link.href = item.Url;
+          link.textContent = 'Ver mais';
+          bloco.appendChild(link);
+        }
+      }
+
+      container.appendChild(bloco);
+    });
+  } catch (err) {
+    container.innerHTML = "<p>Erro ao carregar dados: " + err.message + "</p>";
+  }
+}
+
+carregarConteudo();
+</script>
 
     <!-- Rodapé -->
     <footer>
