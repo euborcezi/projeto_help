@@ -245,22 +245,21 @@ footer {
 
 /* ---------- TEMA ESCURO ---------- */
 .tema-escuro {
-  background-color: #0d130d;
-  color: #e6e6e6;
+  background-color: #0b0b0b;
+  color: #e0e0e0;
 }
 
 .tema-escuro header {
-  background-color: #0f3b0f;
-  color: #e6e6e6;
+  background-color: #0d2e0d;
 }
 
 .tema-escuro footer {
-  background-color: #145914;
-  color: #e6e6e6;
+  background-color: #0d2e0d;
+  color: #e0e0e0;
 }
 
 .tema-escuro .conteudo-scroll {
-  background: #0f0f0f;
+  background: #121212;
   border-color: #1f1f1f;
 }
 
@@ -269,40 +268,13 @@ footer {
 }
 
 .tema-escuro .bloco-item h2 {
-  color: #8dff8d;
-}
-
-.tema-escuro .bloco-item p {
-  color: #dcdcdc;
-}
-
-.tema-escuro .dados-planilha {
-  background: #0f0f0f;
-  color: #e6e6e6;
-}
-
-.tema-escuro .dados-planilha th {
- 	background: #0f3b0f;
- 	color: #e6e6e6;
-}
-
-.tema-escuro .dados-planilha tr:nth-child(even) {
-  background: #121212;
-}
-
-.tema-escuro .dados-planilha tr:hover {
-  background: #1b1b1b;
-}
-
-.tema-escuro .info {
-  background-color: #0f3b0f;
-  color: #e6e6e6;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  color: #b4ffb4;
 }
 
 .tema-escuro .tema-toggle {
   background: #222;
 }
 
-.tema-escuro .tema-toggle
-
+.tema-escuro .tema-toggle .bolinha {
+  transform: translateX(24px);
+}
