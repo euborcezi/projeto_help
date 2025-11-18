@@ -11,7 +11,7 @@ body {
 /* Cabeçalho mais moderno */
 header {
     background: linear-gradient(135deg, #008000, #008000);
-    color: #000000;
+    color: white;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -245,8 +245,8 @@ footer {
 
 /* ---------- TEMA ESCURO ---------- */
 .tema-escuro {
-  background-color: #0b0b0b;
-  color: #e0e0e0;
+  background-color: #000000;
+  color: #000000;
 }
 
 .tema-escuro header {
@@ -259,20 +259,20 @@ footer {
 }
 
 .tema-escuro .conteudo-scroll {
-  background: #121212;
-  border-color: #1f1f1f;
+  background: #000000;
+  border-color: #000000;
 }
 
 .tema-escuro .bloco-item {
-  border-color: #1f1f1f;
+  border-color: #000000;
 }
 
 .tema-escuro .bloco-item h2 {
-  color: #b4ffb4;
+  color: #226e22;
 }
 
 .tema-escuro .tema-toggle {
-  background: #222;
+  background: #000000;
 }
 
 .tema-escuro .tema-toggle .bolinha {
