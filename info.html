@@ -10,14 +10,19 @@
 
 <body>
 
+    <!-- Botão do Tema -->
+    <div id="tema-toggle" class="tema-toggle">
+        <div class="bolinha"></div>
+    </div>
+
     <!-- Cabeçalho -->
     <header>
         <h2>SuporteIF</h2>
         <nav>
             <a href="index.html">Início</a>
-            <a href="info.html">Informações</a>
+            <a href="info.html" aria-current="page">Informações</a>
             <a href="contato.html">Contato</a>
-            <a href="planilha.html" aria-current="page">Planilha</a>
+            <a href="planilha.html">Planilha</a>
         </nav>
     </header>
 
@@ -50,6 +55,23 @@
     <footer>
         <p>&copy; 2025 SuporteIF - Sistema de Suporte Técnico do IFPR.</p>
     </footer>
+
+    <!-- SCRIPT DO TEMA ESCURO (LOCAL CORRETO) -->
+    <script>
+        const toggle = document.getElementById("tema-toggle");
+        const body = document.body;
+
+        let tema = localStorage.getItem("tema") || "tema-claro";
+        if (tema === "tema-escuro") body.classList.add("tema-escuro");
+
+        if (toggle) {
+            toggle.addEventListener("click", () => {
+                body.classList.toggle("tema-escuro");
+                const ativo = body.classList.contains("tema-escuro");
+                localStorage.setItem("tema", ativo ? "tema-escuro" : "tema-claro");
+            });
+        }
+    </script>
 
 </body>
 
