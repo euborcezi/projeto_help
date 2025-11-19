@@ -245,34 +245,53 @@ footer {
 
 /* ---------- TEMA ESCURO ---------- */
 .tema-escuro {
-  background-color: #000000;
-  color: #000000;
+  background: linear-gradient(to right, #3a6f3a, #3a6f3a);
+  color: #e0e0e0;
 }
 
 .tema-escuro header {
-  background-color: #0d2e0d;
+  background: linear-gradient(135deg, #003f00, #003f00);
+  color: #e0e0e0;
+}
+
+.tema-escuro header nav a {
+  color: #e0e0e0;
+}
+
+.tema-escuro header nav a:hover {
+  background-color: #005500;
+  color: white;
+}
+
+.tema-escuro main {
+  color: #e0e0e0;
 }
 
 .tema-escuro footer {
-  background-color: #0d2e0d;
+  background-color: #004400;
   color: #e0e0e0;
 }
 
 .tema-escuro .conteudo-scroll {
-  background: #000000;
-  border-color: #000000;
+  background: #355e35;
+  border-color: #2d4e2d;
+  color: #e0e0e0;
 }
 
 .tema-escuro .bloco-item {
-  border-color: #000000;
+  border-color: #2d4e2d;
 }
 
 .tema-escuro .bloco-item h2 {
-  color: #226e22;
+  color: #9ae79a;
+}
+
+.tema-escuro .bloco-item p {
+  color: #e0e0e0;
 }
 
 .tema-escuro .tema-toggle {
-  background: #000000;
+  background: #003000;
 }
 
 .tema-escuro .tema-toggle .bolinha {
